@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucas | Desenvolvedor Backend</title>
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="la.ico">
+  
+    <!-- remover preloader -->
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          var preloader = document.getElementById('preloader');
+          if (preloader) {
+            preloader.classList.add('preloader-hidden');
+            setTimeout(function() {
+              if (preloader.parentNode) {
+                preloader.parentNode.removeChild(preloader);
+              }
+            }, 500);
+          }
+        }, 1500); // Mostrar por 1.5 segundos e depois remover
+      });
+    </script>
+    
+    <!-- JS principal -->
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/theme.js"></script>
+  </head>
+<body>
+<!-- Preloader simplificado -->
+<div id="preloader">
+<div class="loader">
+    <div class="loader-inner">
+        <span>L</span>
+        <span>U</span>
+        <span>C</span>
+        <span>A</span>
+        <span>S</span>
+    </div>
+</div>
+</div>
+
+<!-- Seletor de idioma e tema em dropdown para mobile -->
+<div class="settings-dropdown">
+  <button class="settings-button" aria-label="Configurações" data-i18n-title="configuracoes">
+    <i class="fas fa-cog"></i>
+  </button>
+  <div class="settings-content">
+    <div class="settings-section">
+      <h4 data-i18n="idioma">Idioma</h4>
+      <div class="language-selector">
+        <button class="language-btn" data-lang="pt" title="Português" aria-label="Português"><span class="flag">🇧🇷</span></button>
+        <button class="language-btn" data-lang="en" title="English" aria-label="English"><span class="flag">🇺🇸</span></button>
+      </div>
+    </div>
+    <div class="settings-section">
+      <h4 data-i18n="tema">Tema</h4>
+      <div class="theme-selector">
+        <button class="theme-btn" data-theme="light" title="Tema Claro" aria-label="Tema Claro" data-i18n-title="temaClaro"><span class="theme-icon">☀️</span></button>
+        <button class="theme-btn" data-theme="dark" title="Tema Escuro" aria-label="Tema Escuro" data-i18n-title="temaEscuro"><span class="theme-icon">🌙</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Versão desktop dos seletores (será escondida em mobile) -->
+<div class="switchers-container desktop-switchers">
+  <div class="switcher language-switcher">
+    <label class="switcher-label" data-i18n="idioma">Idioma</label>
+    <div class="button-group">
+      <button class="language-btn" data-lang="pt" title="Português" aria-label="Português"><span class="flag">🇧🇷</span></button>
+      <button class="language-btn" data-lang="en" title="English" aria-label="English"><span class="flag">🇺🇸</span></button>
+    </div>
+  </div>
+  <div class="switcher theme-switcher">
+    <label class="switcher-label" data-i18n="tema">Tema</label>
+    <div class="button-group">
+      <button class="theme-btn" data-theme="light" title="Tema Claro" aria-label="Tema Claro" data-i18n-title="temaClaro"><span class="theme-icon">☀️</span></button>
+      <button class="theme-btn" data-theme="dark" title="Tema Escuro" aria-label="Tema Escuro" data-i18n-title="temaEscuro"><span class="theme-icon">🌙</span></button>
+    </div>
+  </div>
+</div>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="imgs/la-logo.png" alt="Logo LA" style="height:150px; width:auto; display:block;" />
+        </div>
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="menu">
+                <li><a href="#inicio" data-i18n="inicio">Início</a></li>
+                <li><a href="#sobre" data-i18n="sobre">Sobre</a></li>
+                <li><a href="#projetos" data-i18n="projetos">Projetos</a></li>
+                <li><a href="#habilidades" data-i18n="habilidades">Habilidades</a></li>
+                <li><a href="#contato" data-i18n="contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+  <main>
+      <section id="inicio" class="hero">
+          <div class="container">
+              <div class="hero-content">
+                  <div class="hero-text">
+                      <span class="greeting" data-i18n="greeting">Olá, eu sou</span>
+                      <h1>Lucas <span>Adriano</span></h1>
+                      <h2 data-i18n="role">Desenvolvedor Backend</h2>
+                      <p data-i18n="tagline">Transformando ideias em experiências digitais incríveis</p>
+                      <div class="hero-buttons">
+                          <a href="#projetos" class="btn primary" data-i18n="verProjetos">Ver Projetos</a>
+                          <a href="#contato" class="btn secondary" data-i18n="contato">Contato</a>
+                      </div>
+                  </div>
+                  <div class="hero-image">
+                      <div class="image-container">
+                          <img src="https://images.unsplash.com/photo-1596003906949-67221c37965c?auto=format&fit=crop&q=80&w=500" alt="Desenvolvedor trabalhando" loading="lazy">
+                      </div>
+                  </div>
+              </div>
+              <div class="scroll-down">
+                  <a href="#sobre">
+                      <i class="fas fa-chevron-down"></i>
+                  </a>
+              </div>
+          </div>
+      </section>
+
+      <section id="sobre" class="sobre">
+          <div class="container">
+              <h2 class="section-title" data-i18n="sobreMim">Sobre Mim</h2>
+              <div class="sobre-content">
+                  <div class="sobre-image">
+                      <img src="imgs/{7B0F0FBF-52A3-49A1-AD88-8C26E6D21127}.png" alt="Foto profissional" loading="lazy">
+                      <div class="experience-badge">
+                          <span class="number">1+</span>
+                          <span class="text">Anos de Experiência</span>
+                      </div>
+                  </div>
+                  <div class="sobre-text">
+                      <p data-i18n="sobreDesc">Sou um desenvolvedor backend com experiência em PHP, Python, e JavaScript. Especializado em criar APIs RESTful, sistemas de banco de dados otimizados e arquiteturas escaláveis.</p>
+                      <div class="sobre-info">
+                          <div class="info-item">
+                              <i class="fas fa-user"></i>
+                              <div>
+                                  <h4 data-i18n="nome">Nome:</h4>
+                                  <p>Lucas Adriano</p>
+                              </div>
+                          </div>
+                          <div class="info-item">
+                              <i class="fas fa-envelope"></i>
+                              <div>
+                                  <h4 data-i18n="email">Email:</h4>
+                                  <p>lucasadriano0505rj@gmail.com</p>
+                              </div>
+                          </div>
+                          <div class="info-item">
+                              <i class="fas fa-map-marker-alt"></i>
+                              <div>
+                                  <h4 data-i18n="localizacao">Localização:</h4>
+                                  <p>Rio de Janeiro, Brasil</p>
+                              </div>
+                          </div>
+                          <div class="info-item">
+                              <i class="fas fa-briefcase"></i>
+                              <div>
+                                  <h4 data-i18n="disponibilidade">Disponibilidade:</h4>
+                                  <p data-i18n="disponibilidadeValue">Freelance / Tempo Integral</p>
+                              </div>
+                          </div>
+                          <div class="cv-download">
+                              <a href="docs/Curriculo - Lucas Adriano.pdf" class="btn primary" download="Curriculo-Lucas-Adriano.pdf" data-lang="pt" data-i18n="downloadCV">Download CV</a>
+                              <a href="docs/Curriculum vitae - Lucas Adriano.pdf" class="btn primary" download="Curriculum vitae - Lucas Adriano.pdf" data-lang="en" style="display: none;" data-i18n="downloadCV">Download CV</a>
+                            </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section id="projetos" class="projetos">
+          <div class="container">
+              <h2 class="section-title" data-i18n="meusProjetos">Meus Projetos</h2>
+              
+              <div class="projetos-filtro">
+                  <button class="filtro-btn active" data-filter="todos" data-i18n="todos">Todos</button>
+                  <button class="filtro-btn" data-filter="web" data-i18n="frontend">Front-end</button>
+                  <button class="filtro-btn" data-filter="backend" data-i18n="backend">Backend</button>
+                </div>
+              
+              <div class="projetos-grid">
+                  <!-- Projeto 1 -->
+                  <div class="projeto-card" data-categoria="web">
+                      <div class="projeto-img">
+                          <img src="imgs/{CC6F6455-69E4-48FC-B403-2C020304E808}.png" alt="Agencia Marketing Website" loading="lazy">
+                      </div>
+                      <div class="projeto-info">
+                          <span class="projeto-categoria">Web</span>
+                          <h3 class="projeto-titulo">Agencia de Marketing</h3>
+                          <p class="projeto-desc">Site institucional da Agência HUPE, desenvolvido com foco em performance e experiência do usuário.</p>
+                          <div class="projeto-tech">
+                              <span>HTML5</span>
+                              <span>CSS3</span>
+                              <span>JavaScript</span>
+                          </div>
+                          <div class="projeto-links">
+                              <a href="https://agenciahupe.com.br/" class="projeto-link" aria-label="Ver projeto" target="_blank" rel="noopener noreferrer">
+                                  <i class="fas fa-external-link-alt"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Projeto 2 -->
+                  <div class="projeto-card" data-categoria="backend">
+                      <div class="projeto-img">
+                          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800" alt="API RESTful" loading="lazy">
+                      </div>
+                      <div class="projeto-info">
+                          <span class="projeto-categoria">Backend</span>
+                          <h3 class="projeto-titulo">API RESTful</h3>
+                          <p class="projeto-desc">API completa para menu de restaurantes</p>
+                          <div class="projeto-tech">
+                              <span>Python</span>
+                              <span>FastAPI</span>
+                              <span>PostgreSQL</span>
+                          </div>
+                          <div class="projeto-links">
+                              <a href="https://github.com/lucarx/Api-cardapio" class="projeto-link" aria-label="Ver código">
+                                  <i class="fab fa-github"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Projeto 3 -->
+                  <div class="projeto-card" data-categoria="web">
+                      <div class="projeto-img">
+                          <img src="imgs/image.png" alt="Oficina" loading="lazy">
+                      </div>
+                      <div class="projeto-info">
+                          <span class="projeto-categoria">Web</span>
+                          <h3 class="projeto-titulo">Painel oficina </h3>
+                          <p class="projeto-desc">Dashboard interativo para oficinas desenvolvido com interface intuitiva, contendo abas de clientes, veículos e estoque. Oferecendo gestão eficiente e organizada.</p>
+                          <div class="projeto-tech">
+                              <span>HTML</span>
+                              <span>CSS</span>
+                              <span>PHP</span>
+                              <span>MYSQL</span>
+                          </div>
+                          <div class="projeto-links">
+                              <p class="projeto-desc">Freelance</p>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Projeto 4 -->
+                  <div class="projeto-card" data-categoria="backend">
+                      <div class="projeto-img">
+                          <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=800" alt="Controle_estoque" loading="lazy">
+                      </div>
+                      <div class="projeto-info">
+                          <span class="projeto-categoria">Backend</span>
+                          <h3 class="projeto-titulo">Controle de Estoque</h3>
+                          <p class="projeto-desc">Sistema gerencial com alertas automatizados e relatórios integrados.</p>
+                          <div class="projeto-tech">
+                              <span>PHP</span>
+                              <span>CRUD</span>
+                              <span>MYSQL</span>
+                          </div>
+                          <div class="projeto-links">
+                              <a href="https://github.com/lucarx/Estoque" class="projeto-link" aria-label="Ver código" target="_blank" rel="noopener noreferrer">
+                                  <i class="fab fa-github"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Projeto 5 -->
+                  <div class="projeto-card" data-categoria="backend">
+                      <div class="projeto-img">
+                          <img src="imgs/b8ccf4a39901d01a3597bf9f001b9397.jpg" alt="Microservices Architecture" loading="lazy">
+                      </div>
+                      <div class="projeto-info">
+                          <span class="projeto-categoria">Backend</span>
+                          <h3 class="projeto-titulo">Calculadora em Python</h3>
+                          <p class="projeto-desc">Calculadora em Python/Pyautogui com operações básicas e avançadas, memória, histórico, tratamento de erros, parser de expressões e interface intuitiva, seguindo clean code e OOP.</p>
+                          <div class="projeto-tech">
+                              <span>Python</span>
+                              <span>OOP</span>
+                              <span>Pyautogui</span>
+                          </div>
+                          <div class="projeto-links">
+                              <a href="https://github.com/lucarx/calculadora" class="projeto-link" aria-label="Ver código" target="_blank" rel="noopener noreferrer">
+                                  <i class="fab fa-github"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+  <!-- Seção Habilidades -->
+      <section id="habilidades" class="habilidades">
+      <div class="container">
+          <h2 class="section-title" data-i18n="minhasHabilidades">Minhas Habilidades</h2>
+          <div class="habilidades-content">
+          <div class="habilidades-tecnicas">
+              <div class="skill-grid">
+                  <div class="skill-item">
+                      <div class="skill-icon">
+                          <i class="fab fa-python"></i>
+                      </div>
+                      <h4>Python</h4>
+                  </div>
+                  <div class="skill-item">
+                      <div class="skill-icon">
+                          <i class="fab fa-php"></i>
+                      </div>
+                      <h4>PHP</h4>
+                  </div>
+                  <div class="skill-item">
+                      <div class="skill-icon">
+                          <i class="fab fa-js"></i>
+                      </div>
+                      <h4>JavaScript</h4>
+                  </div>
+                  <div class="skill-item">
+                      <div class="skill-icon">
+                          <i class="fab fa-html5"></i>
+                      </div>
+                      <h4>HTML5</h4>
+                  </div>
+                  <div class="skill-item">
+                      <div class="skill-icon">
+                          <i class="fab fa-css3-alt"></i>
+                      </div>
+                      <h4>CSS3</h4>
+                  </div>
+                  <div class="skill-item">
+                      <div class="skill-icon">
+                          <i class="fab fa-git"></i>
+                      </div>
+                      <h4>GIT</h4>
+                  </div>
+                  <div class="skill-item">
+                      <div class="skill-icon">
+                          <i class="fab fa-github"></i>
+                      </div>
+                      <h4>Github</h4>
+                  </div>
+                  <div class="skill-item">
+                      <div class="skill-icon">
+                          <i class="fa-solid fa-atom"></i>
+                      </div>
+                      <h4>IA</h4>
+                  </div>
+                  <div class="skill-item">
+                      <div class="skill-icon">
+                          <i class="fas fa-database"></i> 
+                      </div>
+                      <h4>MYSQL</h4>
+                  </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+      <section id="contato" class="contato">
+          <div class="container">
+              <h2 class="section-title" data-i18n="entreEmContato">Entre em Contato</h2>
+              <div class="contato-content">
+                  <div class="contato-info">
+                      <h3 data-i18n="vamosConversar">Vamos conversar</h3>
+                      <p data-i18n="contatoDesc">Estou disponível para projetos freelance e oportunidades de trabalho.</p>
+                      <div class="info-list">
+                          <div class="info-item">
+                              <i class="fas fa-map-marker-alt"></i>
+                              <div>
+                                  <h4 data-i18n="localizacaoContato">Localização</h4>
+                                  <p>Rio de Janeiro, Brasil</p>
+                              </div>
+                          </div>
+                          <div class="info-item">
+                              <i class="fas fa-envelope"></i>
+                              <div>
+                                  <h4 data-i18n="email">Email</h4>
+                                  <p>lucasadriano0505rj@gmail.com</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="social-links">
+                          <a href="https://www.linkedin.com/in/lucarx/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                              <i class="fab fa-linkedin-in"></i>
+                          </a>
+                          <a href="https://github.com/lucarx" target="_blank" rel="noopener noreferrer" aria-label="github">
+                              <i class="fab fa-github"></i>
+                          </a>
+                      </div>
+                  </div>
+                  <form class="contato-form" action="https://formsubmit.co/lucasadriano0505rj@gmail.com" method="POST">
+                      <div class="form-group">
+                          <input type="text" name="name" placeholder="Seu Nome" data-i18n-placeholder="seuNome" required>
+                      </div>
+                      <div class="form-group">
+                          <input type="email" name="email" placeholder="Seu Email" data-i18n-placeholder="seuEmail" required>
+                      </div>
+                      <div class="form-group">
+                          <input type="text" name="subject" placeholder="Assunto" data-i18n-placeholder="assunto">
+                      </div>
+                      <div class="form-group">
+                          <textarea name="message" placeholder="Sua Mensagem" data-i18n-placeholder="suaMensagem" required></textarea>
+                      </div>
+                      <input type="hidden" name="_captcha" value="false">
+                      <button type="submit" class="btn primary" data-i18n="enviarMensagem">Enviar Mensagem</button>
+                  </form>
+              </div>
+          </div>
+      </section>
+  </main>
+
+  <footer>
+      <div class="container">
+          <div class="footer-content">
+              <p>&copy; 2025 Lucas Adriano. <span data-i18n="direitos">Todos os direitos reservados.</span></p>
+              <nav class="footer-nav">
+                  <a href="#inicio" data-i18n="inicio">Início</a>
+                  <a href="#sobre" data-i18n="sobre">Sobre</a>
+                  <a href="#projetos" data-i18n="projetos">Projetos</a>
+                  <a href="#habilidades" data-i18n="habilidades">Habilidades</a>
+                  <a href="#contato" data-i18n="contato">Contato</a>
+              </nav>
+          </div>
+      </div>
+  </footer>
+
+</body>
+</html>
