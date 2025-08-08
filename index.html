@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="shortcut icon" href="la.ico">
   
     <!-- remover preloader -->
@@ -34,6 +35,7 @@
     <script src="js/i18n.js"></script>
     <script src="js/main.js" defer></script>
     <script src="js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
 <body>
 <!-- Preloader simplificado -->
@@ -200,117 +202,238 @@
                   <button class="filtro-btn" data-filter="backend" data-i18n="backend">Backend</button>
                 </div>
               
-              <div class="projetos-grid">
-                  <!-- Projeto 1 -->
-                  <div class="projeto-card" data-categoria="web">
-                      <div class="projeto-img">
-                          <img src="imgs/{CC6F6455-69E4-48FC-B403-2C020304E808}.png" alt="Agencia Marketing Website" loading="lazy">
-                      </div>
-                      <div class="projeto-info">
+              <!-- Container principal do carrossel -->
+              <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+  
+                    <!-- Slide 1 - Agência de Marketing -->
+                    <div class="swiper-slide">
+                      <div class="projeto-card" data-categoria="web">
+                        <div class="projeto-img">
+                          <img src="imgs/{CC6F6455-69E4-48FC-B403-2C020304E808}.png" alt="Agência Marketing Website" loading="lazy">
+                        </div>
+                        <div class="projeto-info">
                           <span class="projeto-categoria">Web</span>
-                          <h3 class="projeto-titulo">Agencia de Marketing</h3>
-                          <p class="projeto-desc">Site institucional da Agência HUPE, desenvolvido com foco em performance e experiência do usuário.</p>
+                          <h3 class="projeto-titulo">Agência de Marketing</h3>
+                          <p class="projeto-desc">Site institucional da Agência HUPE, focado em performance e experiência do usuário.</p>
                           <div class="projeto-tech">
-                              <span>HTML5</span>
-                              <span>CSS3</span>
-                              <span>JavaScript</span>
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
                           </div>
                           <div class="projeto-links">
-                              <a href="https://agenciahupe.com.br/" class="projeto-link" aria-label="Ver projeto" target="_blank" rel="noopener noreferrer">
-                                  <i class="fas fa-external-link-alt"></i>
-                              </a>
+                            <a href="https://agenciahupe.com.br/" class="projeto-link" target="_blank" rel="noopener noreferrer" aria-label="Ver projeto">
+                              <i class="fas fa-external-link-alt"></i>
+                            </a>
                           </div>
+                        </div>
                       </div>
-                  </div>
-                  
-                  <!-- Projeto 2 -->
-                  <div class="projeto-card" data-categoria="backend">
-                      <div class="projeto-img">
+                    </div>
+                
+                    <!-- Slide 2 - Dashboard Oficina -->
+                    <div class="swiper-slide">
+                      <div class="projeto-card" data-categoria="web">
+                        <div class="projeto-img">
+                          <img src="imgs/image.png" alt="Oficina" loading="lazy">
+                        </div>
+                        <div class="projeto-info">
+                          <span class="projeto-categoria">Web</span>
+                          <h3 class="projeto-titulo">Dashboard Oficina</h3>
+                          <p class="projeto-desc">Dashboard com abas de clientes, veículos e estoque. Interface intuitiva para gestão eficiente.</p>
+                          <div class="projeto-tech">
+                            <span>HTML</span><span>CSS</span><span>PHP</span><span>MySQL</span>
+                          </div>
+                          <div class="projeto-links">
+                            <p class="projeto-desc">Freelance</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <!-- Slide 3 - Jackpot -->
+                    <div class="swiper-slide">
+                      <div class="projeto-card" data-categoria="web">
+                        <div class="projeto-img">
+                          <img src="https://imgs.search.brave.com/X6SuZpUL4lLAaAgMDiuRPMpWqKQvxCr0B3zlwRBEua8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMjE2/MDIzMjM4NS9waG90/by9jYXNpbm8tc2xv/dC1tYWNoaW5lLXdp/dGgtY2hpcHMtamFj/a3BvdC1jb25jZXB0/LmpwZz9iPTEmcz02/MTJ4NjEyJnc9MCZr/PTIwJmM9Q0xnSnNZ/NkZ4TDRXcE1YTzBy/UzZWTG1jcGdUc21W/OFE2MjAyVGdzai0y/ST0" alt="Jackpot" loading="lazy">
+                        </div>
+                        <div class="projeto-info">
+                          <span class="projeto-categoria">Web</span>
+                          <h3 class="projeto-titulo">Jackpot</h3>
+                          <p class="projeto-desc">App de sorteio de prêmios com lógica simples e funcional.</p>
+                          <div class="projeto-tech">
+                            <span>PHP</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                          </div>
+                          <div class="projeto-links">
+                            <a href="https://github.com/lucarx/Jackpot" class="projeto-link" target="_blank" aria-label="Ver código">
+                              <i class="fab fa-github"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <!-- Slide 4 - API RESTful -->
+                    <div class="swiper-slide">
+                      <div class="projeto-card" data-categoria="backend">
+                        <div class="projeto-img">
                           <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800" alt="API RESTful" loading="lazy">
-                      </div>
-                      <div class="projeto-info">
+                        </div>
+                        <div class="projeto-info">
                           <span class="projeto-categoria">Backend</span>
                           <h3 class="projeto-titulo">API RESTful</h3>
-                          <p class="projeto-desc">API completa para menu de restaurantes</p>
+                          <p class="projeto-desc">API em Flask para gerenciamento de cardápios. Estrutura em MVC, integração com DB e Swagger.</p>
                           <div class="projeto-tech">
-                              <span>Python</span>
-                              <span>FastAPI</span>
-                              <span>PostgreSQL</span>
+                            <span>Python</span><span>FastAPI</span><span>PostgreSQL</span>
                           </div>
                           <div class="projeto-links">
-                              <a href="https://github.com/lucarx/Api-cardapio" class="projeto-link" aria-label="Ver código">
-                                  <i class="fab fa-github"></i>
-                              </a>
+                            <a href="https://github.com/lucarx/Api-cardapio" class="projeto-link" target="_blank" aria-label="Ver código">
+                              <i class="fab fa-github"></i>
+                            </a>
                           </div>
+                        </div>
                       </div>
-                  </div>
-                  
-                  <!-- Projeto 3 -->
-                  <div class="projeto-card" data-categoria="web">
-                      <div class="projeto-img">
-                          <img src="imgs/image.png" alt="Oficina" loading="lazy">
-                      </div>
-                      <div class="projeto-info">
-                          <span class="projeto-categoria">Web</span>
-                          <h3 class="projeto-titulo">Painel oficina </h3>
-                          <p class="projeto-desc">Dashboard interativo para oficinas desenvolvido com interface intuitiva, contendo abas de clientes, veículos e estoque. Oferecendo gestão eficiente e organizada.</p>
-                          <div class="projeto-tech">
-                              <span>HTML</span>
-                              <span>CSS</span>
-                              <span>PHP</span>
-                              <span>MYSQL</span>
-                          </div>
-                          <div class="projeto-links">
-                              <p class="projeto-desc">Freelance</p>
-                          </div>
-                      </div>
-                  </div>
-                  
-                  <!-- Projeto 4 -->
-                  <div class="projeto-card" data-categoria="backend">
-                      <div class="projeto-img">
-                          <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=800" alt="Controle_estoque" loading="lazy">
-                      </div>
-                      <div class="projeto-info">
+                    </div>
+                
+                    <!-- Slide 5 - Controle de Estoque -->
+                    <div class="swiper-slide">
+                      <div class="projeto-card" data-categoria="backend">
+                        <div class="projeto-img">
+                          <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=800" alt="Controle de Estoque" loading="lazy">
+                        </div>
+                        <div class="projeto-info">
                           <span class="projeto-categoria">Backend</span>
                           <h3 class="projeto-titulo">Controle de Estoque</h3>
-                          <p class="projeto-desc">Sistema gerencial com alertas automatizados e relatórios integrados.</p>
+                          <p class="projeto-desc">Sistema com alertas automatizados, relatórios e controle total do estoque.</p>
                           <div class="projeto-tech">
-                              <span>PHP</span>
-                              <span>CRUD</span>
-                              <span>MYSQL</span>
+                            <span>PHP</span><span>CRUD</span><span>MySQL</span>
                           </div>
                           <div class="projeto-links">
-                              <a href="https://github.com/lucarx/Estoque" class="projeto-link" aria-label="Ver código" target="_blank" rel="noopener noreferrer">
-                                  <i class="fab fa-github"></i>
-                              </a>
+                            <a href="https://github.com/lucarx/Estoque" class="projeto-link" target="_blank" aria-label="Ver código">
+                              <i class="fab fa-github"></i>
+                            </a>
                           </div>
+                        </div>
                       </div>
-                  </div>
-                  
-                  <!-- Projeto 5 -->
-                  <div class="projeto-card" data-categoria="backend">
-                      <div class="projeto-img">
-                          <img src="imgs/b8ccf4a39901d01a3597bf9f001b9397.jpg" alt="Microservices Architecture" loading="lazy">
-                      </div>
-                      <div class="projeto-info">
-                          <span class="projeto-categoria">Backend</span>
-                          <h3 class="projeto-titulo">Calculadora em Python</h3>
-                          <p class="projeto-desc">Calculadora em Python/Pyautogui com operações básicas e avançadas, memória, histórico, tratamento de erros, parser de expressões e interface intuitiva, seguindo clean code e OOP.</p>
+                    </div>
+                
+                    <!-- Slide 6 - Calculadora Python -->
+                    <div class="swiper-slide">
+                      <div class="projeto-card" data-categoria="backend">
+                        <div class="projeto-img">
+                          <img src="imgs/b8ccf4a39901d01a3597bf9f001b9397.jpg" alt="Calculadora Python" loading="lazy">
+                        </div>
+                        <div class="projeto-info">
+                          <span class="projeto-categoria">Python</span>
+                          <h3 class="projeto-titulo">Calculadora Python</h3>
+                          <p class="projeto-desc">Calculadora com OOP, Pyautogui, histórico de operações e tratamento de erros.</p>
                           <div class="projeto-tech">
-                              <span>Python</span>
-                              <span>OOP</span>
-                              <span>Pyautogui</span>
+                            <span>Python</span><span>OOP</span><span>Pyautogui</span>
                           </div>
                           <div class="projeto-links">
-                              <a href="https://github.com/lucarx/calculadora" class="projeto-link" aria-label="Ver código" target="_blank" rel="noopener noreferrer">
-                                  <i class="fab fa-github"></i>
-                              </a>
+                            <a href="https://github.com/lucarx/calculadora" class="projeto-link" target="_blank" aria-label="Ver código">
+                              <i class="fab fa-github"></i>
+                            </a>
                           </div>
+                        </div>
                       </div>
+                    </div>
+                
+                    <!-- Slide 7 - Bot Discord -->
+                    <div class="swiper-slide">
+                      <div class="projeto-card" data-categoria="backend">
+                        <div class="projeto-img">
+                          <img src="https://imgs.search.brave.com/oIJqC7gol9g4IbHFqk7_ITIBXnS9SQKnclUEdwOqREU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ibG9n/LnBsdWdhLmNvL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIyLzEw/L2JvdC1uby1kaXNj/b3JkLnN2Zw" alt="Bot Discord" loading="lazy">
+                        </div>
+                        <div class="projeto-info">
+                          <span class="projeto-categoria">Python</span>
+                          <h3 class="projeto-titulo">Bot Discord</h3>
+                          <p class="projeto-desc">Bot com automações, comandos personalizados e organização modular.</p>
+                          <div class="projeto-tech">
+                            <span>Python</span>
+                          </div>
+                          <div class="projeto-links">
+                            <a href="https://github.com/lucarx/bot-discord" class="projeto-link" target="_blank" aria-label="Ver código">
+                              <i class="fab fa-github"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <!-- Slide 8 - CRM2 -->
+                    <div class="swiper-slide">
+                      <div class="projeto-card" data-categoria="backend">
+                        <div class="projeto-img">
+                          <img src="https://github.com/user-attachments/assets/30e1fbda-bad3-45fc-bf46-e0b31152fbeb" alt="CRM2" loading="lazy">
+                        </div>
+                        <div class="projeto-info">
+                          <span class="projeto-categoria">PHP</span>
+                          <h3 class="projeto-titulo">CRM2</h3>
+                          <p class="projeto-desc">Sistema de CRM com controle de clientes, tarefas e painel administrativo.</p>
+                          <div class="projeto-tech">
+                            <span>PHP</span><span>MySQL</span>
+                          </div>
+                          <div class="projeto-links">
+                            <a href="https://github.com/lucarx/crm2" class="projeto-link" target="_blank" aria-label="Ver código">
+                              <i class="fab fa-github"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <!-- Slide 9 - Sistema Concessionária -->
+                    <div class="swiper-slide">
+                      <div class="projeto-card" data-categoria="backend">
+                        <div class="projeto-img">
+                          <img src="https://imgs.search.brave.com/a2gOTktYqYvQvbkihVhn0Ma6uPCmZ9VA4BbO_GGLdJI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQ3/MjY3MzQ1Ni9lcy9m/b3RvL2Zsb3RhLWRl/LXZlaCVDMyVBRGN1/bG9zLWVzdGFjaW9u/YWRvcy1lbi11bi1j/b25jZXNpb25hcmlv/LWRlLWF1dG9tJUMz/JUIzdmlsZXMuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPXlR/ZVJBNHgyeWtjZHYw/V3l5cHpJWmtTR3hT/aG1kWm1jak9QSnBr/N3FRWkE9" alt="Sistema Concessionária" loading="lazy">
+                        </div>
+                        <div class="projeto-info">
+                          <span class="projeto-categoria">Python</span>
+                          <h3 class="projeto-titulo">Sistema Concessionária</h3>
+                          <p class="projeto-desc">Gerencia veículos, vendas e relatórios — com OOP e interface funcional.</p>
+                          <div class="projeto-tech">
+                            <span>Python</span>
+                          </div>
+                          <div class="projeto-links">
+                            <a href="https://github.com/lucarx/SistemaConcessionaria" class="projeto-link" target="_blank" aria-label="Ver código">
+                              <i class="fab fa-github"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <!-- Slide 10 - YouTube Downloader -->
+                    <div class="swiper-slide">
+                      <div class="projeto-card" data-categoria="backend">
+                        <div class="projeto-img">
+                          <img src="https://imgs.search.brave.com/fu0UuQIq_efvzYw9G8t7hFS-F72BKN9v9_WK6uv5iAM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c29jaWFscGx1Zy5p/by9jZG4tY2dpL2lt/YWdlL3F1YWxpdHk9/OTAsZm9ybWF0PWF1/dG8vaHR0cHM6Ly9j/ZG4ucHJvZC53ZWJz/aXRlLWZpbGVzLmNv/bS82MjhkNDQ2N2Rl/MjM4YTU4MDY3NTNj/OWIvNjMzNGEwZDU3/YTY4NmRlOGZiMjRi/NDA2X3lvdXR1YmUt/c2VydmljZXMtaWNv/bi5qcGc" alt="YouTube Downloader" loading="lazy">
+                        </div>
+                        <div class="projeto-info">
+                          <span class="projeto-categoria">Python</span>
+                          <h3 class="projeto-titulo">YouTube Downloader</h3>
+                          <p class="projeto-desc">Script prático para baixar vídeos do YouTube em diferentes qualidades e formatos.</p>
+                          <div class="projeto-tech">
+                            <span>Python</span>
+                          </div>
+                          <div class="projeto-links">
+                            <a href="https://github.com/lucarx/youtube-downloader" class="projeto-link" target="_blank" aria-label="Ver código">
+                              <i class="fab fa-github"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
               </div>
+              <!-- Botões e paginação -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
+        </div>
       </section>
 
   <!-- Seção Habilidades -->
@@ -448,6 +571,28 @@
           </div>
       </div>
   </footer>
-
+                    <script>
+                        const swiper = new Swiper(".mySwiper", {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                        loop: true,
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                        breakpoints: {
+                            768: {
+                            slidesPerView: 2,
+                            },
+                            1024: {
+                            slidesPerView: 3,
+                            },
+                        }
+                        });
+                    </script>
 </body>
 </html>
